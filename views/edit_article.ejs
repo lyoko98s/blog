@@ -1,0 +1,29 @@
+<%- include('./header.ejs') %> 
+
+<div class="container my-4">
+    <% if (error==true) { %>
+        <div class="alert alert-danger" role="alert">
+            Error: Invalid article image. Upload a valid image (PNG,JPG,JPEG)
+          </div>
+    <% } %>
+    <form action="/confirmEdit/<%= article_data._id %> " method="POST" enctype="multipart/form-data">
+        <div class="form-group text-white">
+            <label class="h6">Article Image</label>
+            <input type="file" class="form-control" name="imageEdit">
+        </div>
+        <div class="form-group text-white">
+            <label class="h6">Article Title</label>
+            <input type="text" class="form-control" name="title" value="<%= article_data.title %>">
+        </div>
+        <div class="form-group text-white">
+            <label class="h6">Article Post</label>
+            <textarea class="form-control" rows="12" name="post" type="text"><%= article_data.post %></textarea>
+        </div>
+        <div class="form-group text-white">
+            <p class="card-text"><small class="text-muted">Last updated : <%= article_data.date %></small></p>
+        </div>
+        <button disabled class="btn btn-info btn-lg btn-block" type="submit">Update - Disabled For Now</button>
+    </form>
+</div>
+    
+<%- include('./footer.ejs') %> 

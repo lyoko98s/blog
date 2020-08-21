@@ -1,0 +1,17 @@
+<%- include('./header.ejs') %> 
+
+
+<div class="container my-4">
+    
+    <div class="card mb-3 grayBG">
+        <img src="../<%= article_datails.imgURL %>" class="card-img-top" alt="...">
+        <div class="card-body grayC">
+          <h4 class="card-title"><%= article_datails.title %></h4>
+          <p class="card-text"><%= article_datails.post %></p>
+          <p class="card-text"><small class="text-muted">Last updated : <%= article_datails.date %></small></p>
+        </div>
+      </div>
+
+</div>
+
+<%- include('./footer.ejs') %> 

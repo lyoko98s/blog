@@ -1,0 +1,49 @@
+body 
+{
+    background-color: rgb(23, 24, 23);
+}
+
+textarea , p
+{
+    white-space: pre-wrap;
+}
+
+.navbar
+{
+    background-color: rgb(19, 19, 19);
+}
+
+.navbar a
+{
+    font-size: x-large !important;
+    font-weight: 500 !important;
+}
+
+.grayBG
+{
+    background-color: rgb(51, 51, 51);
+}
+
+.grayC
+{
+    color: rgb(196, 198, 200);
+}
+
+.dec-off
+{
+    text-decoration: none !important;
+}
+
+.card-sized
+{
+    height: 21vh !important;
+    overflow: hidden;
+}
+
+.t
+{
+    white-space: normal;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
