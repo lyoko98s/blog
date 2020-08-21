@@ -84,10 +84,10 @@ adminRouter.get('/delete/:id',async(req,res)=>
 
 adminRouter.get('/dashboard/search',async(req,res)=>
 {
-    let t = req.query.searchTerm
-    //let tr = '/' + t + '/'
-    console.log(t);
-    let articles_data = await articleModel.find({title: /t/})
+    let searchTerm = req.query.searchTerm
+    console.log(searchTerm)
+    let articles_data = await articleModel.find({title: {$regex: searchTerm}})
+    console.log(articles_data)
     let admin = true
     res.render('dashboard',{articles_data, admin})
 })

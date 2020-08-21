@@ -38,8 +38,10 @@ function fileFilter (req, file, cb) {
 }
 
 var uploadAdd = multer({dest:'uploads/articles_images',storage,fileFilter,}).single('imageAdd')
-
 app.use(uploadAdd)
+
+//var uploadEdit = multer({dest:'uploads/articles_images',storage,fileFilter,}).single('imageEdit')
+//app.use(uploadEdit)
 
 
 // ========================================== VIEW ARTICLE ==========================================>>
@@ -56,7 +58,8 @@ app.get('/article/:id',async(req,res)=>
 
 app.use(adminRouter)
 app.use(userRouter)
-mongoose.connect('mongodb+srv://devo:tavo@devo.fddan.mongodb.net/blogDB', { useUnifiedTopology: true , useNewUrlParser: true})
+//mongoose.connect('mongodb+srv://devo:tavo@devo.fddan.mongodb.net/blogDB', { useUnifiedTopology: true , useNewUrlParser: true})
+mongoose.connect('mongodb://localhost:27017/blogDB', { useUnifiedTopology: true , useNewUrlParser: true})
 app.listen(process.env.PORT||3003 , ()=>{
     console.log(`Server Is Running ....`);
 })

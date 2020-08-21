@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-md-8 m-auto">
             <form class="search-input d-flex" action="/search" method="GET">
-                <input disabled class="form-control" type="search" name="searchTerm" type="text" placeholder="search">
-                <button disabled class="btn btn-outline-success ml-2" type="submit">Search</button>
+                <input class="form-control" type="search" name="searchTerm" type="text" placeholder="search">
+                <button class="btn btn-outline-success ml-2" type="submit">Search</button>
             </form>
         </div>
     </div>
@@ -18,7 +18,7 @@
         <% for( let i = 0; i < articles_data.length; i++ ) { %>
             <div class="col mb-4">
                 <div class="card grayBG">
-                    <a href="/article/<%= articles_data[i]._id %>"><img src="<%= articles_data[i].imgURL %> " class="card-img-top" alt="article-cover"></a>
+                    <a href="/article/<%= articles_data[i]._id %>"><img src="../<%= articles_data[i].imgURL %> " class="card-img-top" alt="article-cover"></a>
                     <div class="card-body grayC card-sized">
                         <a href="/article/<%= articles_data[i]._id %>" class="dec-off"><h5 class="card-title"><%= articles_data[i].title %></h5></a>
                         <p class="card-text"><%= articles_data[i].post %></p>
