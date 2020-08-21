@@ -58,8 +58,8 @@ app.get('/article/:id',async(req,res)=>
 
 app.use(adminRouter)
 app.use(userRouter)
-mongoose.connect('mongodb+srv://devo:tavo@devo.fddan.mongodb.net/blogDB', { useUnifiedTopology: true , useNewUrlParser: true})
-//mongoose.connect('mongodb://localhost:27017/blogDB', { useUnifiedTopology: true , useNewUrlParser: true})
+//mongoose.connect('mongodb+srv://devo:tavo@devo.fddan.mongodb.net/blogDB', { useUnifiedTopology: true , useNewUrlParser: true})
+mongoose.connect('mongodb://localhost:27017/blogDB', { useUnifiedTopology: true , useNewUrlParser: true})
 app.listen(process.env.PORT||3003 , ()=>{
     console.log(`Server Is Running ....`);
 })

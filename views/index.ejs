@@ -18,7 +18,7 @@
         <% for( let i = 0; i < articles_data.length; i++ ) { %>
             <div class="col mb-4">
                 <div class="card grayBG">
-                    <a href="/article/<%= articles_data[i]._id %>"><img src="../<%= articles_data[i].imgURL %> " class="card-img-top" alt="article-cover"></a>
+                    <a href="/article/<%= articles_data[i]._id %>"><img src="<%= articles_data[i].imgURL %> " class="card-img-top" alt="article-cover"></a>
                     <div class="card-body grayC card-sized">
                         <a href="/article/<%= articles_data[i]._id %>" class="dec-off"><h5 class="card-title"><%= articles_data[i].title %></h5></a>
                         <p class="card-text"><%= articles_data[i].post %></p>
